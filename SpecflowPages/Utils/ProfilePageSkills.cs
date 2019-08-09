@@ -34,17 +34,18 @@ namespace SpecflowPages.Utils
             // Driver.driver.FindElement(By.XPath("//*[@id='account -profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[1]/input")).SendKeys("Selenium");
             Driver.driver.FindElement(By.XPath("//input[@placeholder = 'Add Skill']")).SendKeys("Selenium");
             //Choose the skill level from the dropdown
-            SelectElement select = new SelectElement(Driver.driver.FindElement(By.XPath("//*[@id='account - profile - section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[2]/select")));
+            SelectElement select = new SelectElement(Driver.driver.FindElement(By.XPath("//select[@class ='ui fluid dropdown']")));
             select.SelectByText("Beginner");
             //Click Add
-            Driver.driver.FindElement(By.XPath("//*[@id='account - profile - section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/span/input[1]")).Click();
+            Driver.driver.FindElement(By.XPath("//input[@class ='ui teal button ']")).Click();
         }
 
         public static void ValidateSkills()
         {
             string ExpectedValue = "Selenium";
-            string ActualValue = Driver.driver.FindElement(By.XPath("//*[@id='account - profile - section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td[1]")).Text;
-            if (ExpectedValue == ActualValue)
+            string ActualValue = Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[1]")).Text;
+           Thread.Sleep(2000);
+                if (ExpectedValue == ActualValue)
             {
                 Console.WriteLine("Test Passed, Added a Language Successfully");
                 SaveScreenShotClass.SaveScreenshot(Driver.driver, "SkillsAdded");
