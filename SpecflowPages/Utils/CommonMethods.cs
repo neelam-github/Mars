@@ -20,13 +20,13 @@ namespace SpecflowPages
             {
                 var folderLocation = (ConstantUtils.ScreenshotPath);
 
-                if (!System.IO.Directory.Exists("C:\\Users\\Neelam\\Desktop\\Mars project\\SpecflowTests-Base\\SpecflowTests-Base\\SpecflowTests\\ScreenShots"))
+                if (!System.IO.Directory.Exists(folderLocation))
                 {
-                    System.IO.Directory.CreateDirectory("C:\\Users\\Neelam\\Desktop\\Mars project\\SpecflowTests-Base\\SpecflowTests-Base\\SpecflowTests\\ScreenShots");
+                    System.IO.Directory.CreateDirectory(folderLocation);
                 }
 
                 var screenShot = ((ITakesScreenshot)driver).GetScreenshot();
-                var fileName = new StringBuilder("C:\\Users\\Neelam\\Desktop\\Mars project\\SpecflowTests-Base\\SpecflowTests-Base\\SpecflowTests\\ScreenShots");
+                var fileName = new StringBuilder(folderLocation);
 
                 fileName.Append(ScreenShotFileName);
                 fileName.Append(DateTime.Now.ToString("_dd-mm-yyyy_mss"));
@@ -38,7 +38,7 @@ namespace SpecflowPages
         }
         #endregion
 
-       
+
         //ExtentReports
         #region reports
         public static ExtentTest test;
@@ -50,7 +50,7 @@ namespace SpecflowPages
         }
 
         #endregion
-        
+
 
         //Element Present
         #region Element Present
@@ -91,7 +91,7 @@ namespace SpecflowPages
         }
         #endregion
 
-        
+
 
 
 

@@ -15,9 +15,9 @@ namespace SpecflowPages.Utils
         public static void AddEducations()
         {
             //Click on the Education Tab
-            Driver.driver.FindElement(By.XPath("//*[@id='account - profile - section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]")).Click();
+            Driver.driver.FindElement(By.XPath("//a[@data-tab ='third']")).Click();
             //Click on Add New
-            Driver.driver.FindElement(By.XPath("//*[@id='account - profile - section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/thead/tr/th[6]/div")).Click();
+            Driver.driver.FindElement(By.XPath("//input[@class='ui teal button']")).Click();
             //Enter the institute detail
             Driver.driver.FindElement(By.XPath("//input[@name = 'instituteName']")).SendKeys("SIET");
             //Select the country
