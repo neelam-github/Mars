@@ -33,9 +33,14 @@ namespace SpecflowPages.Utils
             Thread.Sleep(1000);
             //Click on Login Button
             Driver.driver.FindElement(By.XPath("//button[@class = 'fluid ui teal button']")).Click();
-            
 
-            
+            //Validate the page
+            Thread.Sleep(2000);
+            String myTitle1 = Driver.driver.Title;
+            Console.WriteLine(myTitle1);
+            Assert.That(myTitle1, Is.EqualTo("Profile"));
+
+
 
 
 

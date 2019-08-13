@@ -17,12 +17,7 @@ namespace SpecflowPages.Utils
         public static void AddSkills()
         {
 
-            //Validate the page
-            //Validate the page
-            //String myTitle1 = Driver.driver.Title;
-            //Console.WriteLine(myTitle1);
-           // Assert.That(myTitle1, Is.EqualTo("Profile"));
-
+            
             // Click on Skills tab
             // Driver.driver.FindElement(By.XPath("//*[@id='account - profile - section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]")).Click();
             Driver.driver.FindElement(By.XPath("//a[@data-tab='second']")).Click();
