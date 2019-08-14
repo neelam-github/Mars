@@ -28,7 +28,7 @@ namespace SpecflowPages.Utils
             SelectElement select = new SelectElement(Driver.driver.FindElement(By.XPath("//select[@name = 'country']")));
             select.SelectByText("India");
             //Select Title
-            SelectElement select1 = new SelectElement(Driver.driver.FindElement(By.XPath("//*[@id='account - profile - section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[2]/div[1]/select")));
+            SelectElement select1 = new SelectElement(Driver.driver.FindElement(By.XPath("//select[@name ='title']")));
             select1.SelectByText("B.Tech");
             //Enter degree
             Driver.driver.FindElement(By.XPath("//*[@id='account - profile - section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[2]/div[2]/input")).SendKeys("Electronics & Telecomm");
