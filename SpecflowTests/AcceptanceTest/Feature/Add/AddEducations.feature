@@ -1,4 +1,4 @@
-﻿Feature: SpecFlowFeature3
+﻿Feature: Add Educations
 	In order to update my profile
 	As a Skill trader
 	I would like to add education that I have

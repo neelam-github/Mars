@@ -17,7 +17,7 @@ namespace SpecflowTests.AcceptanceTest.HookUp.Edit
         [Then(@"the updated skills shoukd be shown on the list")]
         public void ThenTheUpdatedSkillsShoukdBeShownOnTheList()
         {
-            SpecflowPages.Utils.ProfilePageSkills.EditValidation();
+            SpecflowPages.Utils.ProfilePageSkills.EditSKills();
         }
     }
 }

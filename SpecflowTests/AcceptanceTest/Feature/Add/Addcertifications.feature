@@ -1,4 +1,4 @@
-﻿Feature: SpecFlowFeature4
+﻿Feature: Add Certifications
 	In order to update my profile
 	As a skill trader
 	I would like to add the certifications I have

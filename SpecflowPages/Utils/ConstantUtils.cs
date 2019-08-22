@@ -14,14 +14,17 @@ namespace SpecflowPages
 
         //ScreenshotPath
         // public static string ScreenshotPath = @"C:\Users\Neelam\Desktop\Mars project\SpecflowTests-Base\SpecflowTests-Base\SpecflowTests\SpecflowPages\TestReports\Screenshots";
-        public static string ScreenshotPath = Directory.GetCurrentDirectory();
+        public static string ScreenshotPath = Directory.GetCurrentDirectory() + @"\SpecflowPages\TestReports\Screenshots\";
+
 
         //ExtentReportsPath
         // public static string ReportsPath = @"C:\Users\Neelam\Desktop\Mars project\SpecflowTests-Base\SpecflowTests-Base\SpecflowTests\SpecflowPages\TestReports\Test1.html";
-        public static string ReportsPath = Directory.GetCurrentDirectory();
+        public static string ReportsHTMLPath = Directory.GetCurrentDirectory() + @"\SpecflowPages\ReportHTML.html\";
+
         //ReportXML Path
         // public static string ReportXMLPath = @"C:\Users\Neelam\Desktop\Mars project\SpecflowTests-Base\SpecflowTests-Base\SpecflowTests\SpecflowPages\TestReports\ReportXML1.xml";
-        public static string ReportXMLPath = Directory.GetCurrentDirectory();
+        public static string ReportXMLPath = Directory.GetCurrentDirectory() + @"\SpecflowPages\ReportXML.xml\";
+
 
 
     }

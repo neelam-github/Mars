@@ -45,7 +45,7 @@ namespace SpecflowPages
         public static ExtentReports extent;
         public static void ExtentReports()
         {
-            extent = new ExtentReports(ConstantUtils.ReportsPath, true, DisplayOrder.NewestFirst);
+            extent = new ExtentReports(ConstantUtils.ReportsHTMLPath, true, DisplayOrder.NewestFirst);
             extent.LoadConfig(ConstantUtils.ReportXMLPath);
         }
 

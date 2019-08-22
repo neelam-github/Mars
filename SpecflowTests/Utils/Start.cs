@@ -15,7 +15,7 @@ namespace SpecflowTests.Utils
     
     public class Start : Driver
     {
-        [SetUp]
+        [BeforeScenario]
         public void LogIn()
         {
             //Launch the browser
@@ -27,21 +27,21 @@ namespace SpecflowTests.Utils
                       
         }
         //Languages
-       [Test]
-        public void AddLanguages()
+       
+       /* public void AddLanguages()
         {
             // call the profile page language class
             SpecflowPages.Utils.ProfilePageLanguage.AddLang();
             SpecflowPages.Utils.ProfilePageLanguage.AddValidation();
             
         }
-        [Test]
+       
         public void EditLanguages()
         {
             SpecflowPages.Utils.ProfilePageLanguage.EditLang();
             SpecflowPages.Utils.ProfilePageLanguage.EditValidation();
         }
-        [Test]
+        
         public void DeleteLanguages()
         {
             SpecflowPages.Utils.ProfilePageLanguage.DeleteLang();
@@ -49,40 +49,40 @@ namespace SpecflowTests.Utils
         }
 
         //Skills
-        [Test]
+       
         public void AddSkills()
         {
             // call the profile page skills class
             SpecflowPages.Utils.ProfilePageSkills.AddSkills();
             SpecflowPages.Utils.ProfilePageSkills.AddValidation();
         }
-        [Test]
+        
         public void EditSkills()
         {
             SpecflowPages.Utils.ProfilePageSkills.EditSKills();
             SpecflowPages.Utils.ProfilePageSkills.EditValidation();
         }
-        [Test]
+        
         public void DeleteSkills()
         {
             SpecflowPages.Utils.ProfilePageSkills.DeleteSkills();
             SpecflowPages.Utils.ProfilePageSkills.DeleteValidation();
         }
         //Educations
-        [Test]
+        
         public void AddEducations()
         {
             // call the profile page education class
             SpecflowPages.Utils.ProfilePageEducation.AddEducations();
             SpecflowPages.Utils.ProfilePageEducation.AddValidation();
         }
-        [Test]
+       
         public void EditEducations()
         {
             SpecflowPages.Utils.ProfilePageEducation.EditEducations();
             SpecflowPages.Utils.ProfilePageEducation.EditValidation();
         }
-        [Test]
+      
         public void DeleteEducations()
         {
             SpecflowPages.Utils.ProfilePageEducation.DeleteEducations();
@@ -90,28 +90,28 @@ namespace SpecflowTests.Utils
 
         }
         //Certifications
-        [Test]
+        
         public void AddCertifications()
         {
             // call the profile page certification class
             SpecflowPages.Utils.ProfilePageCertification.AddCertifications();
             SpecflowPages.Utils.ProfilePageCertification.AddValidation();
         }
-        [Test]
+        
         public void EditCertifications()
         {
             SpecflowPages.Utils.ProfilePageCertification.EditCertification();
             SpecflowPages.Utils.ProfilePageCertification.EditValidation();
         }
 
-        [Test]
+     
         public void DeleteCertifications()
         {
             SpecflowPages.Utils.ProfilePageCertification.DeleteCertification();
             SpecflowPages.Utils.ProfilePageCertification.DeleteValidation();
-        }
+        }*/
 
-        [TearDown]
+        [AfterScenario]
         public void TearDown()
         {
             Thread.Sleep(500);

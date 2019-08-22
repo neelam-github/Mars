@@ -1,4 +1,4 @@
-﻿Feature: SpecFlowFeature2
+﻿Feature:Add Skills
 	In order to update my profile
 	As a skill trader
 	I would like to add skills that I have.
