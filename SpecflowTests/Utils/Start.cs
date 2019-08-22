@@ -41,7 +41,7 @@ namespace SpecflowTests.Utils
             SpecflowPages.Utils.ProfilePageLanguage.EditLang();
             SpecflowPages.Utils.ProfilePageLanguage.EditValidation();
         }
-
+        [Test]
         public void DeleteLanguages()
         {
             SpecflowPages.Utils.ProfilePageLanguage.DeleteLang();
@@ -56,12 +56,13 @@ namespace SpecflowTests.Utils
             SpecflowPages.Utils.ProfilePageSkills.AddSkills();
             SpecflowPages.Utils.ProfilePageSkills.AddValidation();
         }
+        [Test]
         public void EditSkills()
         {
             SpecflowPages.Utils.ProfilePageSkills.EditSKills();
             SpecflowPages.Utils.ProfilePageSkills.EditValidation();
         }
-
+        [Test]
         public void DeleteSkills()
         {
             SpecflowPages.Utils.ProfilePageSkills.DeleteSkills();
@@ -75,12 +76,13 @@ namespace SpecflowTests.Utils
             SpecflowPages.Utils.ProfilePageEducation.AddEducations();
             SpecflowPages.Utils.ProfilePageEducation.AddValidation();
         }
+        [Test]
         public void EditEducations()
         {
             SpecflowPages.Utils.ProfilePageEducation.EditEducations();
             SpecflowPages.Utils.ProfilePageEducation.EditValidation();
         }
-
+        [Test]
         public void DeleteEducations()
         {
             SpecflowPages.Utils.ProfilePageEducation.DeleteEducations();

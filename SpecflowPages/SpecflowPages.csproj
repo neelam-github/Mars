@@ -81,7 +81,7 @@
     <Compile Include="Utils\LoginPage.cs" />
     <Compile Include="Utils\ProfilePageCertification.cs" />
     <Compile Include="Utils\ProfilePageEducation.cs" />
-    <Compile Include="Utils\ProfilePageLang.cs" />
+    <Compile Include="Utils\ProfilePageLanguage.cs" />
     <Compile Include="Utils\ProfilePageSkills.cs" />
   </ItemGroup>
   <ItemGroup>

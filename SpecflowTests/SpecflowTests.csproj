@@ -90,33 +90,75 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="AcceptanceTest\Feature\SpecFlowFeature1_1.feature.cs">
+    <Compile Include="AcceptanceTest\Feature\Delete\DeleteCertifications.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeleteCertifications.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptanceTest\Feature\Delete\DeleteEducations.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeleteEducations.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptanceTest\Feature\Delete\DeleteLang.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeleteLang.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptanceTest\Feature\Delete\DeleteSkills.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeleteSkills.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptanceTest\Feature\Edit\SpecFlowFeature1_1.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SpecFlowFeature1_1.feature</DependentUpon>
     </Compile>
-    <Compile Include="AcceptanceTest\HookUp\AddCertifications.cs" />
-    <Compile Include="AcceptanceTest\HookUp\AddEducations.cs" />
-    <Compile Include="AcceptanceTest\HookUp\AddLanguage.cs" />
-    <Compile Include="AcceptanceTest\HookUp\AddSkills.cs" />
-    <Compile Include="AcceptanceTest\Feature\SpecFlowFeature2.feature.cs">
+    <Compile Include="AcceptanceTest\Feature\Edit\SpecFlowFeature1_2.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecFlowFeature1_2.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptanceTest\Feature\Edit\SpecFlowFeature1_3.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecFlowFeature1_3.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptanceTest\Feature\Edit\SpecFlowFeature1_4.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecFlowFeature1_4.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptanceTest\HookUp\Add\AddCertifications.cs" />
+    <Compile Include="AcceptanceTest\HookUp\Add\AddEducations.cs" />
+    <Compile Include="AcceptanceTest\HookUp\Add\AddLanguage.cs" />
+    <Compile Include="AcceptanceTest\HookUp\Add\AddSkills.cs" />
+    <Compile Include="AcceptanceTest\Feature\Add\SpecFlowFeature2.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SpecFlowFeature2.feature</DependentUpon>
     </Compile>
-    <Compile Include="AcceptanceTest\Feature\SpecFlowFeature3.feature.cs">
+    <Compile Include="AcceptanceTest\Feature\Add\SpecFlowFeature3.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SpecFlowFeature3.feature</DependentUpon>
     </Compile>
-    <Compile Include="AcceptanceTest\Feature\SpecFlowFeature4.feature.cs">
+    <Compile Include="AcceptanceTest\Feature\Add\SpecFlowFeature4.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SpecFlowFeature4.feature</DependentUpon>
     </Compile>
-    <Compile Include="AcceptanceTest\HookUp\EditLanguage.cs" />
+    <Compile Include="AcceptanceTest\HookUp\Delete\DeleteCertifications.cs" />
+    <Compile Include="AcceptanceTest\HookUp\Delete\DeleteEducations.cs" />
+    <Compile Include="AcceptanceTest\HookUp\Delete\DeleteLanguage.cs" />
+    <Compile Include="AcceptanceTest\HookUp\Delete\DeleteSkills.cs" />
+    <Compile Include="AcceptanceTest\HookUp\Edit\EditCertifications.cs" />
+    <Compile Include="AcceptanceTest\HookUp\Edit\EditEducations.cs" />
+    <Compile Include="AcceptanceTest\HookUp\Edit\EditLanguage.cs" />
+    <Compile Include="AcceptanceTest\HookUp\Edit\EditSkills.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AcceptanceTest\Feature\SpecFlowFeature1.feature.cs">
+    <Compile Include="AcceptanceTest\Feature\Add\SpecFlowFeature1.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SpecFlowFeature1.feature</DependentUpon>
@@ -124,25 +166,53 @@
     <Compile Include="Utils\Start.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AcceptanceTest\Feature\SpecFlowFeature1_1.feature">
+    <None Include="AcceptanceTest\Feature\Delete\DeleteCertifications.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DeleteCertifications.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AcceptanceTest\Feature\Delete\DeleteEducations.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DeleteEducations.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AcceptanceTest\Feature\Delete\DeleteLang.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DeleteLang.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AcceptanceTest\Feature\Delete\DeleteSkills.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DeleteSkills.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AcceptanceTest\Feature\Edit\SpecFlowFeature1_1.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SpecFlowFeature1_1.feature.cs</LastGenOutput>
     </None>
-    <None Include="AcceptanceTest\Feature\SpecFlowFeature2.feature">
+    <None Include="AcceptanceTest\Feature\Add\SpecFlowFeature2.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SpecFlowFeature2.feature.cs</LastGenOutput>
     </None>
-    <None Include="AcceptanceTest\Feature\SpecFlowFeature3.feature">
+    <None Include="AcceptanceTest\Feature\Add\SpecFlowFeature3.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SpecFlowFeature3.feature.cs</LastGenOutput>
     </None>
-    <None Include="AcceptanceTest\Feature\SpecFlowFeature4.feature">
+    <None Include="AcceptanceTest\Feature\Add\SpecFlowFeature4.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SpecFlowFeature4.feature.cs</LastGenOutput>
     </None>
+    <None Include="AcceptanceTest\Feature\Edit\SpecFlowFeature1_2.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SpecFlowFeature1_2.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AcceptanceTest\Feature\Edit\SpecFlowFeature1_3.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SpecFlowFeature1_3.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AcceptanceTest\Feature\Edit\SpecFlowFeature1_4.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SpecFlowFeature1_4.feature.cs</LastGenOutput>
+    </None>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="AcceptanceTest\Feature\SpecFlowFeature1.feature">
+    <None Include="AcceptanceTest\Feature\Add\SpecFlowFeature1.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SpecFlowFeature1.feature.cs</LastGenOutput>
     </None>
