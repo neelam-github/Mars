@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using RelevantCodes.ExtentReports;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +44,7 @@ namespace SpecflowPages.Utils
     
 
 
-        public static void ValidateEducations()
+        public static void AddValidation()
         {
             string ExpectedValue = "Electronics & Telecomm";
 
@@ -59,7 +60,173 @@ namespace SpecflowPages.Utils
         }
 
 
-    }
+        public static void EditEducations()
+        {
+            //Wait
+            Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+
+            //Click on Education Tab
+            Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]")).Click();
+
+            try
+            {
+                for (var i = 1; i <= 10; i++)
+                {
+
+                    var text = Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[" + i + "]/tr/td[2]")).Text;
+                    Console.WriteLine(text);
+                    if (text == "Electronics & Telecomm")
+                    {
+                        //Wait
+                        Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+
+                        //Click the edit button 
+                        Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[" + i + "]/tr/td[6]/span[1]/i")).Click();
+
+                        //Clear the text and then write new text under College/Uni Name
+                        IWebElement CertAward = Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[" + i + "]/tr/td/div[1]/div[1]/input"));
+                        CertAward.Clear();
+                        CertAward.SendKeys("Synergy");
+
+                        //Click on the dropdown menu (Country of College/uni)
+                        Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[" + i + "]/tr/td/div[1]/div[2]/select")).Click();
+
+                        //Select the Country of the college/uni
+                        IWebElement Country = Driver.driver.FindElements(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[" + i + "]/tr/td/div[1]/div[2]/select/option"))[44];
+                        Country.Click();
+
+                        //Click on the dropdown menu (Title)
+                        Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[" + i + "]/tr/td/div[2]/div[1]/select")).Click();
+
+                        //Select the Country of the college/uni
+                        IWebElement Title = Driver.driver.FindElements(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[" + i + "]/tr/td/div[2]/div[1]/select/option"))[2];
+                        Title.Click();
+
+                        //Clear the text and then write new text under Degree
+                        IWebElement CertFrom = Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[" + i + "]/tr/td/div[2]/div[2]/input"));
+                        CertFrom.Clear();
+                        CertFrom.SendKeys("Electronics");
+
+                        //Click on the dropdown menu (Year of Graduation)
+                        Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[" + i + "]/tr/td/div[2]/div[3]/select")).Click();
+
+                        //Select the Year of Graduation
+                        IWebElement YearOfGrad = Driver.driver.FindElements(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[" + i + "]/tr/td/div[2]/div[3]/select/option"))[5];
+                        YearOfGrad.Click();
+
+                        //Click update
+                        Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[" + i + "]/tr/td/div[3]/input[1]")).Click();
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Test Failed");
+            }
+
+        }
+        public static void EditValidation() { 
+            try
+            {
+                //Start the Reports
+                CommonMethods.ExtentReports();
+
+                Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+
+                CommonMethods.test = CommonMethods.extent.StartTest("Edit Education");
+
+                Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+                string ExpectedValue = "Synergy";
+                string ActualValue = Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[1]/tr/td[2]")).Text;
+
+                Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+
+                if (ExpectedValue == ActualValue)
+                {
+                    CommonMethods.test.Log(LogStatus.Pass, "Test Passed, Edited a Education Successfully");
+                    SaveScreenShotClass.SaveScreenshot(Driver.driver, "EducationEdited");
+                }
+
+                else
+                    CommonMethods.test.Log(LogStatus.Fail, "Test Failed");
+
+            }
+            catch (Exception e)
+            {
+                CommonMethods.test.Log(LogStatus.Fail, "Test Failed", e.Message);
+            }
+        }
+
+        public static void DeleteEducations()
+        {
+            //Wait
+            Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+
+            //Click on Education Tab
+            Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]")).Click();
+
+            try
+            {
+                for (var i = 1; i <= 10; i++)
+                {
+                    var text = Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[" + i + "]/tr/td[2]")).Text;
+                    Console.WriteLine(text);
+                    if (text == "Synergy")
+                    {
+                        //Wait
+                        Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+                        //Click the Delete button
+                        Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[" + i + "]/tr/td[6]/span[2]/i")).Click();
+
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Test Failed");
+            }
+
+        }
+        public static void DeleteValidation() { 
+            try
+            {
+                //Start the Reports
+                CommonMethods.ExtentReports();
+
+                Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+                CommonMethods.test = CommonMethods.extent.StartTest("Delete a Education");
+
+                Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+                string ExpectedValue = "Synergy";
+                string ActualValue = Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[1]/tr/td[2]")).Text;
+
+                Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+
+                if (!(ExpectedValue == ActualValue))
+                {
+                    CommonMethods.test.Log(LogStatus.Pass, "Test Passed, Deleted a Education Successfully");
+                    SaveScreenShotClass.SaveScreenshot(Driver.driver, "EducationDelete");
+                }
+
+                else
+                    CommonMethods.test.Log(LogStatus.Fail, "Test Failed");
+
+            }
+            catch (Exception e)
+            {
+                CommonMethods.test.Log(LogStatus.Fail, "Test Failed", e.Message);
+            }
+        }
+
+
 
     }
+
+}
 

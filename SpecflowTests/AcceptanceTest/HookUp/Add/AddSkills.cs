@@ -5,28 +5,29 @@ using TechTalk.SpecFlow;
 namespace SpecflowTests.AcceptanceTest
 {
     [Binding]
-    public class SpecFlowFeature3Steps
+    public class AddSkills
     {
         [Given(@"I have logged into profile page sucessfully")]
         public void GivenIHaveLoggedIntoProfilePageSucessfully()
         {
-            //wait
+           //wait
             Thread.Sleep(500);
 
             //Call the Login Class            
             SpecflowPages.Utils.LoginPage.LoginStep();
         }
         
-        [When(@"I add a new Education")]
-        public void WhenIAddANewEducation()
+        
+        [When(@"I click on the skill tab and add a new skill")]
+        public void WhenIAddANewSkill()
         {
-            SpecflowPages.Utils.ProfilePageEducation.AddEducations();
+            SpecflowPages.Utils.ProfilePageSkills.AddSkills();
         }
         
-        [Then(@"that education should be displayed on my listing")]
-        public void ThenThatEducationShouldBeDisplayedOnMyListing()
+        [Then(@"that skill should be displayed on my listing")]
+        public void ThenThatSkillShouldBeDisplayedOnMyListing()
         {
-            SpecflowPages.Utils.ProfilePageEducation.ValidateEducations();
+            SpecflowPages.Utils.ProfilePageSkills.AddValidation();
         }
     }
 }

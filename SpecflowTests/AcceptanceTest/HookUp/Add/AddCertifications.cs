@@ -28,7 +28,7 @@ namespace SpecflowTests.AcceptanceTest
         [Then(@"that certification should be displayed on my listing\.")]
         public void ThenThatCertificationShouldBeDisplayedOnMyListing_()
         {
-            SpecflowPages.Utils.ProfilePageCertification.ValidateCertifications();
+            SpecflowPages.Utils.ProfilePageCertification.AddValidation();
         }
     }
 }

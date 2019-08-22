@@ -28,7 +28,7 @@ namespace SpecflowTests.AcceptanceTest
         {
 
             // call the profile page language class
-            SpecflowPages.Utils.ProfilePageLang.AddLang();
+            SpecflowPages.Utils.ProfilePageLanguage.AddLang();
 
         }
 
@@ -53,7 +53,7 @@ namespace SpecflowTests.AcceptanceTest
         [Then(@"that language should be displayed on my listings")]
         public void ThenThatLanguageShouldBeDisplayedOnMyListings()
         {
-            SpecflowPages.Utils.ProfilePageLang.ValidateLang();
+            SpecflowPages.Utils.ProfilePageLanguage.AddValidation();
         }
           //  try
           // {

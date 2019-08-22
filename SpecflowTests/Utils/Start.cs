@@ -26,33 +26,87 @@ namespace SpecflowTests.Utils
             SpecflowPages.Utils.LoginPage.LoginStep();         
                       
         }
+        //Languages
        [Test]
-        public void Feature1()
+        public void AddLanguages()
         {
             // call the profile page language class
-            SpecflowPages.Utils.ProfilePageLang.AddLang();
-            SpecflowPages.Utils.ProfilePageLang.ValidateLang();
+            SpecflowPages.Utils.ProfilePageLanguage.AddLang();
+            SpecflowPages.Utils.ProfilePageLanguage.AddValidation();
+            
         }
         [Test]
-        public void Feature2()
+        public void EditLanguages()
+        {
+            SpecflowPages.Utils.ProfilePageLanguage.EditLang();
+            SpecflowPages.Utils.ProfilePageLanguage.EditValidation();
+        }
+
+        public void DeleteLanguages()
+        {
+            SpecflowPages.Utils.ProfilePageLanguage.DeleteLang();
+            SpecflowPages.Utils.ProfilePageLanguage.DeleteValidation();
+        }
+
+        //Skills
+        [Test]
+        public void AddSkills()
         {
             // call the profile page skills class
             SpecflowPages.Utils.ProfilePageSkills.AddSkills();
-            SpecflowPages.Utils.ProfilePageSkills.ValidateSkills();
+            SpecflowPages.Utils.ProfilePageSkills.AddValidation();
         }
+        public void EditSkills()
+        {
+            SpecflowPages.Utils.ProfilePageSkills.EditSKills();
+            SpecflowPages.Utils.ProfilePageSkills.EditValidation();
+        }
+
+        public void DeleteSkills()
+        {
+            SpecflowPages.Utils.ProfilePageSkills.DeleteSkills();
+            SpecflowPages.Utils.ProfilePageSkills.DeleteValidation();
+        }
+        //Educations
         [Test]
-        public void Feature3()
+        public void AddEducations()
         {
             // call the profile page education class
             SpecflowPages.Utils.ProfilePageEducation.AddEducations();
-            SpecflowPages.Utils.ProfilePageEducation.ValidateEducations();
+            SpecflowPages.Utils.ProfilePageEducation.AddValidation();
         }
+        public void EditEducations()
+        {
+            SpecflowPages.Utils.ProfilePageEducation.EditEducations();
+            SpecflowPages.Utils.ProfilePageEducation.EditValidation();
+        }
+
+        public void DeleteEducations()
+        {
+            SpecflowPages.Utils.ProfilePageEducation.DeleteEducations();
+            SpecflowPages.Utils.ProfilePageEducation.DeleteValidation();
+
+        }
+        //Certifications
         [Test]
-        public void Feature4()
+        public void AddCertifications()
         {
             // call the profile page certification class
             SpecflowPages.Utils.ProfilePageCertification.AddCertifications();
-            SpecflowPages.Utils.ProfilePageCertification.ValidateCertifications();
+            SpecflowPages.Utils.ProfilePageCertification.AddValidation();
+        }
+        [Test]
+        public void EditCertifications()
+        {
+            SpecflowPages.Utils.ProfilePageCertification.EditCertification();
+            SpecflowPages.Utils.ProfilePageCertification.EditValidation();
+        }
+
+        [Test]
+        public void DeleteCertifications()
+        {
+            SpecflowPages.Utils.ProfilePageCertification.DeleteCertification();
+            SpecflowPages.Utils.ProfilePageCertification.DeleteValidation();
         }
 
         [TearDown]
